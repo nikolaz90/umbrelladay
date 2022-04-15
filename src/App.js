@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+ import React from "react";
+ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+ import { ErrorBoundary } from 'react-error-boundary'
+ //pages
+ import Home from './pages/Home'
+ import PersonalTargets from './pages/PersonalTargets'
+ import Error from './pages/Error'
+ //components 
+ import Navbar from './components/Navbar'
+ import Fallback from "./components/Fallback";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const handleError = (error, errorInfo)=>{
+    console.log('Logging error : ', error, errorInfo)
 }
 
-export default App;
+function App(){
+    return(
+        <Router>
+            <ErrorBoundary FallbackComponent={Fallback} onError={handleError}>
+            <Navbar/>
+            <Routes>
+                <Route path='/savingslobster' element={<Home/>}/>
+                <Route path='/savingslobster/personaltargets' element={<PersonalTargets/>}/>
+                <Route path='/savingslobster/*' element={<Error/>}/>
+            </Routes>
+            </ErrorBoundary>
+        </Router>
+    )
+}
+
+export default App
+ 
