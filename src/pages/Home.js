@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Simulator1 from '../components/Simulator1';
 import Simulator2 from '../components/Simulator2';
+import InflationSimulator from '../components/InflationSimulator';
 
 
 function Home() {
@@ -49,11 +50,12 @@ function Home() {
         
         <button className={`btn-sim-select ${activate===0 && 'btn-active'}`} onClick={()=>handleSimulatorChange(0)}>How long</button>
         <button className={`btn-sim-select ${activate===1 && 'btn-active'}`} onClick={()=>handleSimulatorChange(1)}>How much</button>
-        
+        <button className={`btn-sim-select ${activate===2 && 'btn-active'}`} onClick={()=>handleSimulatorChange(2)}>Inflation</button>
       </div>
       <div>
           {simulator === 0 && <Simulator1/>}
           {simulator === 1 && <Simulator2/>}
+          {simulator === 2 && <InflationSimulator/>}
         </div>
       <div>
         <p>The Savings Lobster</p>

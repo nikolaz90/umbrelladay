@@ -7,7 +7,7 @@
 }
 
 body{
-    background: repeating-linear-gradient(-25deg, #f1f1f1 0px, #f1f1f1 60px, #ebebeb 60px, #ebebeb 120px);
+    background: #efefef;
 }
 
 li{
@@ -34,7 +34,7 @@ button{
 .nav{
     background: linear-gradient(-45deg, #f1b3a0, #ff9cc2, #aae8ff, #acf8e6);
     background-size: 200%;
-    animation: back-animation 20s ease-in-out infinite;
+    animation: back-animation 10s ease-in-out infinite;
     padding: 5px;
     border-radius: 25px;
 }
@@ -108,6 +108,12 @@ button{
     flex-wrap: wrap;
 }
 
+@media (max-width:425px) {
+    .simulators-container{
+        flex-direction: column;
+    }   
+}
+
 .btn{
     margin: 5px;
     padding: 10px;
@@ -154,6 +160,29 @@ button{
     background-color: #f6f6f6;
     padding: 10px;
     text-align: center;
+}
+
+.inflation-input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.inflation-simulator{
+    width: 400px;
+}
+
+@media (max-width:580px) {
+    .inflation-simulator{
+        width: auto;
+    }
+}
+
+.ons-link{
+    color: #3fb7f7;
+}
+.ons-link:hover{
+    color: #fe7f74;
 }
 
 .result{
