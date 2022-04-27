@@ -43,6 +43,13 @@ function InflationSimulator() {
   return (
     <div className='simulator inflation-simulator'>
             <form className='inflation-input' onSubmit={handleSubmit}>
+                <p>
+                    This simulator is aimed at giving you an idea of how the value of money changes over time. 
+                    We call this change inflation. It's good to have an idea of how this can effect you and your 
+                    personal finances. If your still not sure about inflation, you should understand that a ten pound
+                    note could have been used to buy more in the past than today. For example, £10 in 2011 
+                    would be worth £12,97 in 2021. So you would need to spend more in 2021 than in 2011 to buy the same thing(s).
+                </p>
                 <h5>The price of goods worth :</h5>
                 <p>£ <input type='number' name='inflation-amount' placeholder='25' min={0} max={999999999} onChange={handleAmount} /></p>
                 <p>in</p>

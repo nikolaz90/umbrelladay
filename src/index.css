@@ -169,7 +169,13 @@ button{
 }
 
 .inflation-simulator{
-    width: 400px;
+    width: 700px;
+}
+
+@media (max-width:850px) {
+    .inflation-simulator{
+        width: 400px;
+    }
 }
 
 @media (max-width:580px) {
