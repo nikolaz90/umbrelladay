@@ -98,8 +98,10 @@ function Simulator1() {
         <input type='number' name='target' className='target' placeholder='10000' step='50' min={0} max={99999999} onChange={handleChangeTarget}></input>
         <p>What is the minimum you can save every month?</p>
         <input type='number' name='monthly-minimum' className='monthly-minimum' placeholder='150' step='50' min={0} max={99999999} onChange={handleMonthlyMin}></input>
-        <p>What is your expected interest rate (%) ?</p>
+        <p>What is your expected interest rate (%) ?<br/>
+        <small>If you don't want to calculate interest, simply put a 0.</small></p>
         <input type='number' name='expected-int' className='expected-int' placeholder='3' step='1' min={0} max={100} onChange={handleExpInterest}></input>
+        
       </form>
       <div className={`result ${noInfo? 'info-please':'info-success'}` }>
         {noInfo===true ? <h5>please enter fields</h5> : <h5>results : </h5>}

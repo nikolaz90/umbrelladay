@@ -67,7 +67,8 @@ function Simulator2() {
         <input type='number' name='years' className='target' placeholder='15' step={1} min={0} max={100} onChange={handleChangeYears}></input>
         <p>What is the minimum you can save every month?</p>
         <input type='number' name='monthly-input' className='monthly-minimum' placeholder='150' step={50} min={0} max={99999999} onChange={handleChangeMonthlyMin}></input>
-        <p>What is your expected interest rate (%) ?</p>
+        <p>What is your expected interest rate (%) ? <br/>
+        <small>If you don't want to calculate interest, simply put a 0.</small></p>
         <input type='number' name='expected-int' className='expected-int' placeholder='3' step={1} min={0} max={100} onChange={handleChangeInterest}></input>
       </form>
       <div className={`result ${noInfo? 'info-please':'info-success'}` }>

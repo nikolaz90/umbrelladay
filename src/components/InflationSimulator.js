@@ -53,13 +53,13 @@ function InflationSimulator() {
                 <h5>The price of goods worth :</h5>
                 <p>£ <input type='number' name='inflation-amount' placeholder='25' min={0} max={999999999} onChange={handleAmount} /></p>
                 <p>in</p>
-                <select onChange={handleYearOne}>
+                <select className='inflation-select' onChange={handleYearOne}>
                     {dataKeys.map((item, index)=>{
                         return <option key={index} value={dataValues[index]}>{item}</option>
                     })}
                 </select>
                 <p>compared to</p>
-                <select onChange={handleYearTwo}>
+                <select className='inflation-select' onChange={handleYearTwo}>
                     {dataKeys.map((item, index)=>{
                         return <option key={index} value={dataValues[index]}>{item}</option>
                     })}

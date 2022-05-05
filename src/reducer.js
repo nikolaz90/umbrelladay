@@ -1,12 +1,12 @@
 function reducer(state, action) {
 
     if(action.type === 'GET_FROM_LOCAL'){
-        let items = JSON.parse(localStorage.getItem('Savings Lobster'));
+        let items = JSON.parse(localStorage.getItem('Umbrella Day'));
         return {...state, months: items.months, goals: items.goals, real:items.real, interest:items.interest}
     }
 
     if(action.type === 'SAVE_TO_LOCAL'){
-        localStorage.setItem('Savings Lobster', JSON.stringify(action.payload))
+        localStorage.setItem('Umbrella Day', JSON.stringify(action.payload))
         return {...state}
     }    
 

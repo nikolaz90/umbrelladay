@@ -32,7 +32,7 @@ button{
 }
 /*nav*/
 .nav{
-    background: linear-gradient(-45deg, #f1b3a0, #ff9cc2, #aae8ff, #acf8e6);
+    background: linear-gradient(-45deg, #c8f1a0, #bbdd99, #c0e39e, #b9ee83);
     background-size: 200%;
     animation: back-animation 10s ease-in-out infinite;
     padding: 5px;
@@ -48,7 +48,9 @@ button{
 
 .nav-logo{
     height: 100px;
-    width: 200px;
+    width: 100px;
+    transform: rotate(-15deg);
+    padding-right: 100px;
 }
 
 .nav-links-container{
@@ -67,6 +69,9 @@ button{
 @media (max-width:500px) {
     .nav-links-container{
         padding: 10px;
+    }
+    .nav-logo{
+        padding-right: 0px;
     }
 }
 
@@ -118,22 +123,22 @@ button{
     margin: 5px;
     padding: 10px;
     border-radius: 25px;
-    background: linear-gradient(-225deg, #64d4d4, #7dd1ff, #aaf9ff, #acf8d6);
+    background: linear-gradient(-225deg, #c8f1a0, #bbdd99, #c0e39e, #b9ee83);
     background-size: 200%;
-    color: white;
+    color: black;
     transition: all 0.3s ease-in-out;
     height: 20px;
 }
 .btn:hover{
     background-position: 50%;
-    color: black;
+    color: white;
 }
 
 .btn-sim-select{
     margin: 5px;
     padding: 10px;
     border-radius: 25px;
-    background: linear-gradient(-225deg, #ebd070, #fbff7d, #e3ffaa, #dbf8ac);
+    background: linear-gradient(-225deg,#c8f1a0, #bbdd99, #c0e39e, #b9ee83);
     background-size: 200%;
     color: black;
     transition: all 0.3s ease-in-out;
@@ -170,6 +175,11 @@ button{
 
 .inflation-simulator{
     width: 700px;
+}
+
+.inflation-select{
+    width: 200px;
+    margin: auto;
 }
 
 @media (max-width:850px) {
