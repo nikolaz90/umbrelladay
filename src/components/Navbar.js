@@ -17,12 +17,12 @@ function Navbar() {
   return (
     <nav className='nav'>
       <div className='nav-content'>
-        <Link to='/umbrelladay'><img className='nav-logo' src={logo} alt='the umbrella day logo'></img></Link>
-        <h1 className='heading'>umbrella day</h1>
+        {/* <Link to='/umbrelladay'><img className='nav-logo' src={logo} alt='the umbrella day logo'></img></Link> */}
+        <Link to='/umbrelladay'><h1 className='heading'>umbrella day</h1></Link>
         <ul className='nav-links-container'>
           <li className='nav-links'><Link to='/umbrelladay'>Home</Link></li>
-          
           <li className='nav-links'><Link to='/umbrelladay/personaltargets'>Goals</Link></li>
+          <li className='nav-links'><Link to='/umbrelladay/about'>About</Link></li>
         </ul>
       </div>
     </nav>

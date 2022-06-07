@@ -7,7 +7,7 @@ import InflationSimulator from '../components/InflationSimulator';
 function Home() {
 
   const [simulator, setSimulator] = useState(0);
-  const [activate, setActivate] = useState(null)
+  const [activate, setActivate] = useState(0)
 
   const handleSimulatorChange = (simNumber)=>{
     setSimulator(simNumber);
@@ -20,19 +20,15 @@ function Home() {
     <section className='section home-section'> 
       
         <h2>Welcome!</h2>
+        <p className='home-paragraph'>Have little to no savings?</p>
         <p className='home-paragraph'>
-          Rainy days happen all the time, plan to make your next rainy day an umbrella day - keep yourself and your family
-          'dry' by saving up for the things you will need.</p>
-        <p className='home-paragraph'>
-          If you have little to no savings, this tool will help you realise that if you save a little, consistently, 
-          you will be able to save up a considerable amount. If you haven't thought about your personal 
-          finances, use this tool to help you think about the difference you could make for your future. 
+          If you haven't thought about your personal 
+          finances, use these tools to help you think about the difference you could make for your future. 
         </p>
         <p className='home-paragraph'>
           Play around with the simulators to help you understand what you are capable of achieving in savings. 
           The simulators are designed to give you a rough idea of how much you can achieve, especially if you are consistant.
-          Have a look at how interest rates can have an effect on the final goal over time. Although interest rates are actually
-          really low at the moment, you may find some saving accounts are better than others and its worth shopping around. 
+          Have a look at how interest rates can have an effect on the final goal over time. 
         </p>
       
       

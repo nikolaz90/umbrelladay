@@ -4,6 +4,7 @@
  //pages
  import Home from './pages/Home'
  import PersonalTargets from './pages/PersonalTargets'
+ import About from './pages/About'
  import Error from './pages/Error'
  //components 
  import Navbar from './components/Navbar'
@@ -22,6 +23,7 @@ function App(){
             <Routes>
                 <Route path='/umbrelladay' element={<Home/>}/>
                 <Route path='/umbrelladay/personaltargets' element={<PersonalTargets/>}/>
+                <Route path='/umbrelladay/about' element={<About/>}/>
                 <Route path='/umbrelladay/*' element={<Error/>}/>
             </Routes>
             </ErrorBoundary>
