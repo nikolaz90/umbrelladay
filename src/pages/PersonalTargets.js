@@ -35,7 +35,11 @@ function PersonalTargets() {
           Then, every month, add the actual savings you made. This will allow you to keep track over time and
           see if you are able to hit your target or not. 
         </p>
-            
+        <p className='personal-paragraph'>
+          Data is stored locally in your browser, 
+          so you can revisit this web page and change the data and keep track of your progress - 
+          data does not leave your browser and is not stored by anyone.
+        </p>
         <div className='summary-container'>
             <SummaryForm />
             <p>or set every month individually</p>
