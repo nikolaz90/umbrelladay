@@ -1,17 +1,19 @@
 import React, {useState, useEffect} from 'react'
-import data from '../inflationData'
+import newData from '../newInflationData'
 
 function InflationSimulator() {
     const onsLink = 'https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/cdko/mm23'
     const boeLink = 'https://www.bankofengland.co.uk/monetary-policy/inflation/inflation-calculator'
 
-    const dataKeys = Object.keys(data[0])
-    const dataValues = Object.values(data[0])
+    const dataKeys = Object.keys(newData)
+    const dataValues = Object.values(newData)
 
     const [amount, setAmount] = useState(0);
     const [yearOne, setYearOne] = useState(0);
     const [yearTwo, setYearTwo] = useState(0); 
     const [inflationResult, setInflationResult] = useState(0)
+
+    // console.log(newData);
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -31,7 +33,7 @@ function InflationSimulator() {
 
     const calculateInflation =()=>{
         let ans = amount * (yearTwo/yearOne)
-        setInflationResult(parseFloat(ans.toFixed(2)))
+        isNaN(ans) ? setInflationResult('0 -- please use numbers') : setInflationResult(ans.toFixed(2))
     }
 
     useEffect(()=>{
