@@ -781,7 +781,7 @@ const newData = `<option value="0.0784455113860095">1209</option>
 <option value="47.7539139497595">1987</option> '
 <option value="49.61775">1988</option> '
 <option value="52.2058333333333">1989</option> '
-<option value="55.8595833333333" selected="selected">1990</option>' 
+<option value="55.8595833333333">1990</option>' 
 <option value="60.05975">1991</option> '
 <option value="62.6015">1992</option> '
 <option value="64.1875">1993</option> '
