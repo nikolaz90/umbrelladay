@@ -21,10 +21,10 @@ function App(){
             <ErrorBoundary FallbackComponent={Fallback} onError={handleError}>
             <Navbar/>
             <Routes>
-                <Route path='/umbrelladay' element={<Home/>}/>
-                <Route path='/umbrelladay/personaltargets' element={<PersonalTargets/>}/>
-                <Route path='/umbrelladay/about' element={<About/>}/>
-                <Route path='/umbrelladay/*' element={<Error/>}/>
+                <Route path='/pers_projects/umbrelladay' element={<Home/>}/>
+                <Route path='/pers_projects/umbrelladay/personaltargets' element={<PersonalTargets/>}/>
+                <Route path='/pers_projects/umbrelladay/about' element={<About/>}/>
+                <Route path='/pers_projects/umbrelladay/*' element={<Error/>}/>
             </Routes>
             </ErrorBoundary>
         </Router>
